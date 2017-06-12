@@ -18,7 +18,7 @@ find_package(Boost REQUIRED system filesystem date_time thread)
 
 catkin_package(
   INCLUDE_DIRS include
-  CATKIN_DEPENDS 
+  CATKIN_DEPENDS
     moveit_core
     moveit_ros_planning_interface
     interactive_markers

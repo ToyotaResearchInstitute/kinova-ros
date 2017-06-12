@@ -133,8 +133,7 @@ install(DIRECTORY include/${PROJECT_NAME}/
 
 
 ## Mark executables and/or libraries for installation
-install(TARGETS kinova_arm_driver kinova_tf_updater
-kinova_interactive_control
+install(TARGETS kinova_driver kinova_arm_driver kinova_tf_updater kinova_interactive_control
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
@@ -143,6 +142,11 @@ kinova_interactive_control
 ## Mark cpp header files for installation
 install(DIRECTORY include/${PROJECT_NAME}/
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+  FILES_MATCHING PATTERN "*.h"
+)
+
+install(DIRECTORY include/kinova/
+  DESTINATION ${CATKIN_GLOBAL_INCLUDE_DESTINATION}/kinova
   FILES_MATCHING PATTERN "*.h"
 )
 
